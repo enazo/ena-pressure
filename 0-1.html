@@ -1,0 +1,25 @@
+<div></div>
+
+<script>
+const canvas = document.createElement('canvas');
+const size = 800;
+canvas.width = size;
+canvas.height = size + 20;
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'red';
+
+for(let i = 0; i < 1; i += 0.01) {
+	const x = i;
+	const y = 1-Math.pow((1-i),20);
+	ctx.fillRect(
+		x * size, 
+		(1-y) * size, 
+		8, 
+		8
+	);
+}
+
+</script>
